@@ -1,48 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class Counter extends Component {
   constructor() {
     super();
-    console.debug('constructor');
-    return {};
+    console.log('constructor');
   }
 
   componentWillMount() {
-    console.debug('componentWillMount');
+    console.log('componentWillMount');
   }
 
   componentWillReceiveProps() {
-    console.debug('componentWillReceiveProps');
+    console.log('componentWillReceiveProps');
   }
 
   shouldComponentUpdate() {
-    console.debug('shouldComponentUpdate');
-  }
-
-  componentWillUpdate() {
-    console.debug('componentWillUpdate');
+    console.log('shouldComponentUpdate');
     return true;
   }
 
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
+  }
+
   componentDidUpdate() {
-    console.debug('componentDidUpdate');
+    console.log('componentDidUpdate');
   }
 
   componentWillUnmount() {
-    console.debug('componentWillUnmount');
+    console.log('componentWillUnmount');
   }
 
   render() {
-    console.debug('render');
+    console.log('render');
     return (
       <h1 className="text-muted">Counter: {this.props.value}</h1>
-    )
+    );
   }
 }
 
 Counter.defaultProps = {
-  console.debug('defaultProps');
-  return {};
+
 }
+console.log('defaultProps');
 
 export default Counter;

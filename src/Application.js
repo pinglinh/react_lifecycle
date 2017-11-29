@@ -6,10 +6,14 @@ import './Application.css';
 class Application extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       counter: 0,
       isCounterHidden: true
-    }
+    };
+
+    this.toggleCounter = this.toggleCounter.bind(this);
+    this.incrementCounter = this.incrementCounter.bind(this);
   }
 
     toggleCounter() {
